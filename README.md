@@ -8,7 +8,7 @@ sudo apt-get install curl
 
 #### Install python-software-properties (add-apt-repository)
 ```shell
-sudo apt-get install python-software-properties
+sudo apt-get install software-properties-common python-software-properties
 ```
 
 #### Install the latest stable version of MongoDB
