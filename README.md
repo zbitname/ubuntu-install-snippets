@@ -10,7 +10,7 @@ sudo apt-get install curl
 ```shell
 sudo apt-get install software-properties-common python-software-properties
 ```
-Shell scripts:
-[Git](https://github.com/zbitname/Ubuntu-settings/blob/master/install/git.sh)
-[MongoDB](https://github.com/zbitname/Ubuntu-settings/blob/master/install/mongodb.sh) / [Official manual](http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/)
-[NodeJS](https://github.com/zbitname/Ubuntu-settings/blob/master/install/nodejs.sh)
+#### Shell scripts:
+- [Git](https://github.com/zbitname/Ubuntu-settings/blob/master/install/git.sh)
+- [MongoDB](https://github.com/zbitname/Ubuntu-settings/blob/master/install/mongodb.sh) / [Official manual](http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/)
+- [NodeJS](https://github.com/zbitname/Ubuntu-settings/blob/master/install/nodejs.sh)
