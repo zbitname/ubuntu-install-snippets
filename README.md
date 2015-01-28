@@ -14,3 +14,10 @@ sudo apt-get update
 sudo apt-get install -y mongodb-org
 ```
 [Official manual](http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/)
+
+#### Install NodeJS
+```shell
+curl -sL https://deb.nodesource.com/setup | sudo bash -
+sudo apt-get install nodejs
+sudo apt-get install build-essential
+```
