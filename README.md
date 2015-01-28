@@ -10,19 +10,7 @@ sudo apt-get install curl
 ```shell
 sudo apt-get install software-properties-common python-software-properties
 ```
-
-#### Install the latest stable version of MongoDB
-```shell
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
-echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee /etc/apt/sources.list.d/mongodb.list
-sudo apt-get update
-sudo apt-get install -y mongodb-org
-```
-[Official manual](http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/)
-
-#### Install NodeJS
-```shell
-curl -sL https://deb.nodesource.com/setup | sudo bash -
-sudo apt-get install -y nodejs
-sudo apt-get install -y build-essential
-```
+Shell scripts:
+[Git](https://github.com/zbitname/Ubuntu-settings/blob/master/install/git.sh)
+[MongoDB](https://github.com/zbitname/Ubuntu-settings/blob/master/install/mongodb.sh) / [Official manual](http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/)
+[NodeJS](https://github.com/zbitname/Ubuntu-settings/blob/master/install/nodejs.sh)
