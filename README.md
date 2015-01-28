@@ -1,6 +1,11 @@
 # Ubuntu-settings
 Helpful Ubuntu snippents
 
+#### Install CURL
+```shell
+sudo apt-get install curl
+```
+
 #### Install python-software-properties (add-apt-repository)
 ```shell
 sudo apt-get install python-software-properties
