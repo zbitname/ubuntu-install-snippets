@@ -30,7 +30,9 @@ do
     done <"./install/$item.sh"
 done
 
-echo "#!/usr/bin/env bash" > result.sh
-echo "$aar" >> result.sh
-echo "apt-get update" >> result.sh
-echo "$install" >> result.sh
+echo "#!/usr/bin/env bash" > user_install.sh
+echo "$aar" >> user_install.sh
+echo "apt-get update" >> user_install.sh
+echo "$install" >> user_install.sh
+
+chmod +x user_install.sh
