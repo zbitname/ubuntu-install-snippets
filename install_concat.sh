@@ -3,6 +3,7 @@
 variants=$''
 aar=$''
 install=$''
+finstall=user_install.sh
 
 for f in ./install/*.sh
 do
@@ -30,9 +31,22 @@ do
     done <"./install/$item.sh"
 done
 
-echo "#!/usr/bin/env bash" > user_install.sh
-echo "$aar" >> user_install.sh
-echo "apt-get update" >> user_install.sh
-echo "$install" >> user_install.sh
+echo "#!/usr/bin/env bash" > finstall
 
-chmod +x user_install.sh
+if [[ !$(aptitude show curl > /dev/null 2>&1) ]]
+    then echo "apt-get install -y curl" >> finstall;
+fi
+
+if [[ !$(aptitude show software-properties-common > /dev/null 2>&1) ]]
+    then echo "apt-get install -y software-properties-common" >> finstall;
+fi
+
+if [[ !$(aptitude show python-software-properties > /dev/null 2>&1) ]]
+    then echo "apt-get install -y python-software-properties" >> finstall;
+fi
+
+echo "$aar" >> finstall
+echo "apt-get update" >> finstall
+echo "$install" >> finstall
+
+chmod +x finstall
