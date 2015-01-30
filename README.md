@@ -1,16 +1,6 @@
 # Ubuntu-settings
 Helpful Ubuntu snippents
 
-#### Install CURL
-```shell
-sudo apt-get install curl
-```
-
-#### Install python-software-properties (add-apt-repository)
-```shell
-sudo apt-get install software-properties-common python-software-properties
-```
-
 #### Download and use
 ```shell
 curl -G https://codeload.github.com/zbitname/ubuntu-settings/zip/master > ubuntu-settings.zip
@@ -21,6 +11,8 @@ cd ubuntu-settings-master
 sudo ./user_install.sh
 # Enter root password
 ```
+
+Auto install packages `curl`, `software-properties-common` and `python-software-properties` if need.
 
 #### Shell scripts:
 - [Git](https://github.com/zbitname/Ubuntu-settings/blob/master/install/git.sh)
