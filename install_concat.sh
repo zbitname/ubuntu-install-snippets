@@ -31,22 +31,24 @@ do
     done <"./install/$item.sh"
 done
 
-echo "#!/usr/bin/env bash" > finstall
+$(rm $finstall > /dev/null 2>&1)
 
-if [[ !$(aptitude show curl > /dev/null 2>&1) ]]
-    then echo "apt-get install -y curl" >> finstall;
+echo "#!/usr/bin/env bash" > $finstall
+
+if !($(aptitude show curl > /dev/null 2>&1))
+    then echo "apt-get install -y curl" >> $finstall;
 fi
 
-if [[ !$(aptitude show software-properties-common > /dev/null 2>&1) ]]
-    then echo "apt-get install -y software-properties-common" >> finstall;
+if !($(aptitude show software-properties-common > /dev/null 2>&1))
+    then echo "apt-get install -y software-properties-common" >> $finstall;
 fi
 
-if [[ !$(aptitude show python-software-properties > /dev/null 2>&1) ]]
-    then echo "apt-get install -y python-software-properties" >> finstall;
+if !($(aptitude show python-software-properties > /dev/null 2>&1))
+    then echo "apt-get install -y python-software-properties" >> $finstall;
 fi
 
-echo "$aar" >> finstall
-echo "apt-get update" >> finstall
-echo "$install" >> finstall
+echo "$aar" >> $finstall
+echo "apt-get update" >> $finstall
+echo "$install" >> $finstall
 
-chmod +x finstall
+chmod +x $finstall
