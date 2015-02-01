@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# version 1.1.0
+
 variants=$''
 aar=$''
 install=$''
@@ -17,7 +19,7 @@ for item in $results
 do
     while read line
     do
-        if [[ ${line:0:1} == '#' || -z $line || $line == 'apt-get update' ]]
+        if [[ ${line:0:1} == '#' || -z $line || $line =~ 'apt-get update' ]]
             then continue;
         fi
 
@@ -36,19 +38,19 @@ $(rm $finstall > /dev/null 2>&1)
 echo "#!/usr/bin/env bash" > $finstall
 
 if !($(aptitude show curl > /dev/null 2>&1))
-    then echo "apt-get install -y curl" >> $finstall;
+    then echo "sudo apt-get install -y curl" >> $finstall;
 fi
 
 if !($(aptitude show software-properties-common > /dev/null 2>&1))
-    then echo "apt-get install -y software-properties-common" >> $finstall;
+    then echo "sudo apt-get install -y software-properties-common" >> $finstall;
 fi
 
 if !($(aptitude show python-software-properties > /dev/null 2>&1))
-    then echo "apt-get install -y python-software-properties" >> $finstall;
+    then echo "sudo apt-get install -y python-software-properties" >> $finstall;
 fi
 
 echo "$aar" >> $finstall
-echo "apt-get update" >> $finstall
+echo "sudo apt-get update" >> $finstall
 echo "$install" >> $finstall
 
 chmod +x $finstall
