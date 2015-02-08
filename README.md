@@ -15,7 +15,7 @@ sudo ./user_install.sh
 Auto install packages `curl`, `software-properties-common` and `python-software-properties` if need.
 
 #### Shell scripts:
-- [Git](/zbitname/Ubuntu-settings/blob/master/install/git.sh)
-- [MongoDB](/zbitname/Ubuntu-settings/blob/master/install/mongodb.sh) / [Official manual](http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/)
-- [NodeJS](https://github.com/zbitname/Ubuntu-settings/blob/master/install/nodejs.sh)
-- [Git flow](/zbitname/Ubuntu-settings/blob/master/install/git-flow.sh)
+- [Git](/zbitname/ubuntu-install-snippets/blob/master/install/git.sh)
+- [MongoDB](/zbitname/ubuntu-install-snippets/blob/master/install/mongodb.sh) / [Official manual](http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/)
+- [NodeJS](/zbitname/ubuntu-install-snippets/blob/master/install/nodejs.sh)
+- [Git flow](/zbitname/ubuntu-install-snippets/blob/master/install/git-flow.sh)
