@@ -1,15 +1,14 @@
-# Ubuntu-settings
-Helpful Ubuntu snippents
+# Helpful Ubuntu install snippets
 
-#### Download and use
+#### Downloading and usage
 ```shell
-curl -G https://codeload.github.com/zbitname/ubuntu-settings/zip/master > ubuntu-settings.zip
-unzip ubuntu-settings.zip
-cd ubuntu-settings-master
+curl -G https://codeload.github.com/zbitname/ubuntu-install-snippets/zip/master > ubuntu-install-snippets.zip
+unzip ubuntu-install-snippets.zip
+cd ubuntu-install-snippets-master
 ./install_concat.sh
 # Choose needed lines
 sudo ./user_install.sh
-# Enter root password
+# Enter root password if need
 ```
 
 Auto install packages `curl`, `software-properties-common` and `python-software-properties` if need.
